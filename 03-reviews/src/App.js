@@ -1,8 +1,9 @@
-import React from "react";
-import Review from "./Review";
-
+import React from 'react';
+import Review from './Review';
+// import { FaGithubSquare } from 'react-icons/fa';
 function App() {
   return (
+    //  <FaGithubSquare className="icon" />
     <main>
       <section className="container">
         <div className="title">

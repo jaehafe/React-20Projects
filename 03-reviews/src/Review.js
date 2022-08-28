@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import people from "./data";
-import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
+import React, { useState } from 'react';
+import people from './data';
+import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 const Review = () => {
   const [index, setIndex] = useState(0);
@@ -22,22 +22,22 @@ const Review = () => {
       return checkNumber(newIndex);
     });
   };
-
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
       return checkNumber(newIndex);
     });
   };
+  // console.log(people);
 
-  const randomPerson = () => {
-    let randomNumber = Math.floor(Math.random() * people.length);
+  const randomPerson = (index) => {
+    let randomNumber = Math.floor(Math.random(index) * people.length);
     if (randomNumber === index) {
       randomNumber = index + 1;
     }
     setIndex(checkNumber(randomNumber));
+    // console.log(setIndex);
   };
-
   return (
     <article className="review">
       <div className="img-container">
