@@ -1,22 +1,23 @@
-import React, { useState } from "react";
-import Menu from "./Menu";
-import Categories from "./Categories";
-import items from "./data";
+import React, { useState } from 'react';
+import Menu from './Menu';
+import Categories from './Categories';
+import items from './data';
 
-const allCategories = ["all", ...new Set(items.map((item) => item.category))];
-console.log(allCategories);
+const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 function App() {
-  const [menuItems, setmenuItems] = useState(items);
+  const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
 
+  console.log(allCategories);
+
   const filterItems = (category) => {
-    if (category === "all") {
-      setmenuItems(items);
+    if (category === 'all') {
+      setMenuItems(items);
       return;
     }
     const newItems = items.filter((item) => item.category === category);
-    setmenuItems(newItems);
+    setMenuItems(newItems);
   };
 
   return (
